@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happiieesstt Birthday 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Patrick Hand', cursive;
+}
+
+body{
+background:#fff7f8;
+overflow-x:hidden;
+color:#222;
+}
+
+/* Floating Hearts */
+.hearts span{
+position:fixed;
+bottom:-100px;
+font-size:25px;
+animation:float 10s linear infinite;
+opacity:0.7;
+}
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.hearts span:nth-child(2){left:20%;animation-delay:2s;}
+.hearts span:nth-child(3){left:40%;animation-delay:4s;}
+.hearts span:nth-child(4){left:60%;animation-delay:1s;}
+.hearts span:nth-child(5){left:80%;animation-delay:3s;}
+.hearts span:nth-child(6){left:90%;animation-delay:5s;}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:30px;
+position:relative;
+}
+
+.card{
+max-width:900px;
+background:white;
+border:5px solid black;
+border-radius:40px;
+padding:40px;
+box-shadow:12px 12px 0px black;
+text-align:center;
+animation:pop 1s ease;
+position:relative;
+}
+
+@keyframes pop{
+0%{
+transform:scale(0.7);
+opacity:0;
+}
+100%{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.main-img{
+width:300px;
+max-width:100%;
+animation:shake 3s infinite ease-in-out;
+}
+
+@keyframes shake{
+0%,100%{transform:rotate(0deg);}
+25%{transform:rotate(2deg);}
+75%{transform:rotate(-2deg);}
+}
+
+.title{
+font-size:70px;
+margin-top:20px;
+line-height:1;
+}
+
+.subtitle{
+font-size:28px;
+margin-top:15px;
+}
+
+.btn{
+margin-top:25px;
+padding:15px 35px;
+font-size:28px;
+background:#ff8fab;
+border:4px solid black;
+border-radius:20px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:6px 6px 0px black;
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+background:#ff5d8f;
+}
+
+.section{
+padding:80px 20px;
+}
+
+.heading{
+text-align:center;
+font-size:60px;
+margin-bottom:50px;
+}
+
+.notes{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.note{
+background:#fff0f3;
+border:4px solid black;
+padding:25px;
+border-radius:30px;
+box-shadow:8px 8px 0px black;
+transform:rotate(-2deg);
+transition:0.3s;
+}
+
+.note:nth-child(even){
+transform:rotate(2deg);
+}
+
+.note:hover{
+transform:scale(1.05) rotate(0deg);
+}
+
+.note h2{
+font-size:35px;
+margin-bottom:15px;
+}
+
+.note p{
+font-size:24px;
+line-height:1.5;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.photo{
+background:white;
+padding:15px;
+border:4px solid black;
+border-radius:25px;
+box-shadow:8px 8px 0px black;
+}
+
+.photo img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.footer{
+padding:60px 20px;
+text-align:center;
+font-size:35px;
+}
+
+.popup{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.5);
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+pointer-events:none;
+transition:0.4s;
+}
+
+.popup.active{
+opacity:1;
+pointer-events:auto;
+}
+
+.popup-box{
+background:#fff0f3;
+padding:40px;
+border-radius:30px;
+border:5px solid black;
+text-align:center;
+max-width:500px;
+width:90%;
+box-shadow:10px 10px 0 black;
+animation:bounce 1s infinite alternate;
+}
+
+@keyframes bounce{
+from{transform:translateY(0px);}
+to{transform:translateY(-10px);}
+}
+
+.popup-box h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.popup-box p{
+font-size:28px;
+line-height:1.5;
+}
+
+.close{
+margin-top:20px;
+padding:12px 25px;
+font-size:24px;
+background:#ff8fab;
+border:3px solid black;
+border-radius:15px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+.title{
+font-size:45px;
+}
+
+.subtitle{
+font-size:22px;
+}
+
+.heading{
+font-size:42px;
+}
+
+.note p{
+font-size:22px;
+}
+}
+
+</style>
+</head>
+<body>
+
+<div class="hearts">
+<span>💖</span>
+<span>✨</span>
+<span>💗</span>
+<span>⭐</span>
+<span>💕</span>
+<span>💘</span>
+</div>
+
+<section class="hero">
+<div class="card">
+
+<img class="main-img" src="Screenshot 2026-05-09 190019.png">
+
+<h1 class="title">Happy Birthday 💖</h1>
+
+<p class="subtitle">
+all my love is only for you ✨
+</p>
+
+<button class="btn" onclick="openPopup()">
+Open 🎁
+</button>
+
+</div>
+</section>
+
+<section class="section">
+<h1 class="heading">Little Notes For You 💌</h1>
+
+<div class="notes">
+
+<div class="note">
+<h2>You Matter 🌸</h2>
+<p>
+You are one of the most special people in my life and I never want to lose you.
+</p>
+</div>
+
+<div class="note">
+<h2> ✨</h2>
+<p>
+You’ve become a huge part of my memories.
+</p>
+</div>
+
+<div class="note">
+<h2>Forever Person 💕</h2>
+<p>
+No matter what happens, I will always care for you the most.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h1 class="heading"> 📸</h1>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="https://i.pinimg.com/736x/50/52/68/5052684de43b62d269a4567ae324ef63.jpg">
+</div>
+
+<div class="photo">
+<img src="https://i.pinimg.com/736x/a5/16/4e/a5164e2afba34705b390ce98226a901f.jpg">
+</div>
+
+<div class="photo">
+<img src="https://i.pinimg.com/736x/89/cf/e3/89cfe33e8532830e7c947878d466ae8c.jpg">
+</div>
+
+</div>
+</section>
+
+<div class="footer">
+🍷🍾
+</div>
+
+<div class="popup" id="popup">
+<div class="popup-box">
+<h1>Happiieesstt Birthday 🎂</h1>
+<p>
+I pray this year gives you endless smiles, peace, success, and everything your heart secretly wishes 💕
+</p>
+
+<button class="close" onclick="closePopup()">
+Close 💌
+</button>
+</div>
+</div>
+
+<script>
+function openPopup(){
+document.getElementById('popup').classList.add('active');
+createConfetti();
+}
+
+function closePopup(){
+document.getElementById('popup').classList.remove('active');
+}
+
+function createConfetti(){
+for(let i=0;i<100;i++){
+let confetti=document.createElement('div');
+confetti.innerHTML='💖';
+confetti.style.position='fixed';
+confetti.style.left=Math.random()*100+'vw';
+confetti.style.top='-20px';
+confetti.style.fontSize=(Math.random()*20+15)+'px';
+confetti.style.zIndex='9999';
+confetti.style.animation=`fall ${Math.random()*3+2}s linear forwards`;
+
+document.body.appendChild(confetti);
+
+setTimeout(()=>{
+confetti.remove();
+},5000);
+}
+}
+
+const style=document.createElement('style');
+style.innerHTML=`
+@keyframes fall{
+0%{transform:translateY(0) rotate(0deg);opacity:1;}
+100%{transform:translateY(100vh) rotate(360deg);opacity:0;}
+}
+`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>
